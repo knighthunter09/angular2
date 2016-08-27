@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+import { routing } from './app.routes'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   entryComponents: [AppComponent],
