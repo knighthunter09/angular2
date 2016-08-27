@@ -3,22 +3,22 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProjectsModule } from './pages/projects/projects.module';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 import { routing } from './app.routes'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProjectsComponent,
-    DashboardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-    routing
+    routing,
+    DashboardModule,
+    ProjectsModule
   ],
   providers: [],
   entryComponents: [AppComponent],
