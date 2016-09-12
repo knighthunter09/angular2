@@ -29,3 +29,10 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Update
+    - update -g angular-cli
+    - edit package.json
+        * "@angular/router": "3.0.0-rc.2"
+        * "@angular/*": "2.0.0-rc.6"
+        * "rxjs": "5.0.0-beta.6"
