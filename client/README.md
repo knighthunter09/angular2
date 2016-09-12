@@ -36,3 +36,5 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
         * "@angular/router": "3.0.0-rc.2"
         * "@angular/*": "2.0.0-rc.6"
         * "rxjs": "5.0.0-beta.6"
+    - edit angular-cli.json
+        * "version": "1.0.0-beta.11-webpack.2"
