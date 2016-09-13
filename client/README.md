@@ -30,7 +30,7 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Update
+## Update RC6
     - update -g angular-cli
     - edit package.json
         * "@angular/router": "3.0.0-rc.2"
@@ -38,3 +38,10 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
         * "rxjs": "5.0.0-beta.6"
     - edit angular-cli.json
         * "version": "1.0.0-beta.11-webpack.2"
+
+## Update RC7
+    - npm uninstall -g angular-cli
+    - npm install -g angular-cli@1.0.0-beta.11-webpack.8
+    - angular modules to 2.0.0-rc.7
+    - rxjs to "5.0.0-beta.12"
+    - "zone.js": "0.6.21"
