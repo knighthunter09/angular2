@@ -8,18 +8,23 @@ import { BoardComponent } from './board/board.component';
 
 import { MdButtonModule } from '@angular2-material/button';
 import { MdCardModule } from '@angular2-material/card';
+import { MdInputModule } from '@angular2-material/input';
+
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent
+    BoardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MdButtonModule,
-    MdCardModule
+    MdCardModule,
+    MdInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
