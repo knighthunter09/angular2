@@ -8,15 +8,14 @@ import { BoardComponent } from './board/board.component';
 import { LoginComponent } from './login/login.component';
 
 import { MdButtonModule } from '@angular2-material/button';
-import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
 import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdListModule } from '@angular2-material/list';
 
 import { routing, appRoutingProviders} from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { UserService  } from './services/user/user.service';
+import { TaskModule } from './task/task.module';
 
 
 @NgModule({
@@ -31,11 +30,10 @@ import { UserService  } from './services/user/user.service';
     FormsModule,
     HttpModule,
     MdButtonModule,
-    MdCardModule,
     MdInputModule,
     MdToolbarModule,
-    MdListModule,
-    routing
+    routing,
+    TaskModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

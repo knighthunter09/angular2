@@ -2,7 +2,7 @@
   <div class="col-1-4">
     <div class="content">
       <h2>New</h2>
-      <md-list>
+      <!--<md-list>
         <md-list-item *ngFor="let task of newTasks">
           <h3 md-line> {{task.title}} </h3>
           <p md-line>
@@ -10,10 +10,11 @@
             <span class="demo-2"> -- {{task.description}} </span>
           </p>
         </md-list-item>
-      </md-list>
+      </md-list>-->
+      <app-task-card *ngFor="let task of newTasks"></app-task-card>
     </div>
   </div>
-  <div class="col-1-4">
+  <!--<div class="col-1-4">
     <div class="content">
       <h2>Development</h2>
       <md-list>
@@ -54,5 +55,5 @@
         </md-list-item>
       </md-list>
     </div>
-  </div>
+  </div>-->
 </div>
