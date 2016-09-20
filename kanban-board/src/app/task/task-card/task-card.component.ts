@@ -7,7 +7,7 @@ import { Task } from '../../domain/task';
   styleUrls: ['./task-card.component.css']
 })
 export class TaskCardComponent implements OnInit {
-  //@Input() task: Task;
+  @Input() task: Task;
   constructor() { }
 
   ngOnInit() {

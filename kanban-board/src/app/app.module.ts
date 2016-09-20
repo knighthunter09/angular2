@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdInputModule } from '@angular2-material/input';
 import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdCardModule } from '@angular2-material/card';
 
 import { routing, appRoutingProviders} from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -32,6 +33,7 @@ import { TaskModule } from './task/task.module';
     MdButtonModule,
     MdInputModule,
     MdToolbarModule,
+    MdCardModule,
     routing,
     TaskModule
   ],

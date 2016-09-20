@@ -6,6 +6,7 @@ import { MdCardModule } from '@angular2-material/card';
 @NgModule({
   declarations: [TaskCardComponent],
   imports: [MdCardModule],
-  providers: []
+  providers: [],
+  exports: [TaskCardComponent]
 })
 export class TaskModule{}

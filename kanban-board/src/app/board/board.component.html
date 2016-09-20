@@ -2,58 +2,25 @@
   <div class="col-1-4">
     <div class="content">
       <h2>New</h2>
-      <!--<md-list>
-        <md-list-item *ngFor="let task of newTasks">
-          <h3 md-line> {{task.title}} </h3>
-          <p md-line>
-            <span> {{task.id}} </span>
-            <span class="demo-2"> -- {{task.description}} </span>
-          </p>
-        </md-list-item>
-      </md-list>-->
-      <app-task-card *ngFor="let task of newTasks"></app-task-card>
+      <app-task-card *ngFor="let task of newTasks" [task]="task"></app-task-card>
     </div>
   </div>
-  <!--<div class="col-1-4">
+  <div class="col-1-4">
     <div class="content">
       <h2>Development</h2>
-      <md-list>
-        <md-list-item *ngFor="let task of developmentTasks">
-          <h3 md-line> {{task.title}} </h3>
-          <p md-line>
-            <span> {{task.id}} </span>
-            <span class="demo-2"> -- {{task.description}} </span>
-          </p>
-        </md-list-item>
-      </md-list>
+      <app-task-card *ngFor="let task of developmentTasks" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
       <h2>Test</h2>
-      <md-list>
-        <md-list-item *ngFor="let task of testTasks">
-          <h3 md-line> {{task.title}} </h3>
-          <p md-line>
-            <span> {{task.id}} </span>
-            <span class="demo-2"> -- {{task.description}} </span>
-          </p>
-        </md-list-item>
-      </md-list>
+      <app-task-card *ngFor="let task of testTasks" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
       <h2>Deploy</h2>
-      <md-list>
-        <md-list-item *ngFor="let task of deployTasks">
-          <h3 md-line> {{task.title}} </h3>
-          <p md-line>
-            <span> {{task.id}} </span>
-            <span class="demo-2"> -- {{task.description}} </span>
-          </p>
-        </md-list-item>
-      </md-list>
+      <app-task-card *ngFor="let task of deployTasks" [task]="task"></app-task-card>
     </div>
-  </div>-->
+  </div>
 </div>
