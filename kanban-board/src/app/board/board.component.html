@@ -1,7 +1,16 @@
 <div class="grid grid-pad">
-  <div class="col-1-1">
+  <div class="col-1-4">
     <div class="content">
-      
+      <h2>Fresh Tasks</h2>
+      <md-list>
+        <md-list-item *ngFor="let task of freshTasks">
+          <h3 md-line> {{task.title}} </h3>
+          <p md-line>
+            <span> {{task.id}} </span>
+            <span class="demo-2"> -- {{task.description}} </span>
+          </p>
+        </md-list-item>
+      </md-list>
     </div>
   </div>
 </div>

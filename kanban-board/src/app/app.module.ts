@@ -11,6 +11,7 @@ import { MdButtonModule } from '@angular2-material/button';
 import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
 import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdListModule } from '@angular2-material/list';
 
 import { routing, appRoutingProviders} from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -33,6 +34,7 @@ import { UserService  } from './services/user/user.service';
     MdCardModule,
     MdInputModule,
     MdToolbarModule,
+    MdListModule,
     routing
   ],
   providers: [UserService],
