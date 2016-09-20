@@ -10,9 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
+import { MdToolbarModule } from '@angular2-material/toolbar';
 
 import { routing, appRoutingProviders} from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { UserService  } from './services/user/user.service';
 
 
 @NgModule({
@@ -29,9 +32,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MdButtonModule,
     MdCardModule,
     MdInputModule,
+    MdToolbarModule,
     routing
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
