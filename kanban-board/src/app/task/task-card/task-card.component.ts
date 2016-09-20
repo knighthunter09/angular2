@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Task } from '../../domain/task';
+import { Task } from '../task';
 
 @Component({
   selector: 'app-task-card',
