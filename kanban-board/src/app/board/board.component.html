@@ -5,22 +5,22 @@
       <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.New" [task]="task"></app-task-card>
     </div>
   </div>
-  <!--<div class="col-1-4">
+  <div class="col-1-4">
     <div class="content">
       <h2>Development</h2>
-      <app-task-card *ngFor="let task of tasks | WithStatus: '1'" [task]="task"></app-task-card> 
+      <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Dev" [task]="task"></app-task-card> 
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
       <h2>Test</h2>
-      <app-task-card *ngFor="let task of tasks | WithStatus: '2'" [task]="task"></app-task-card>
+      <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Test" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
       <h2>Deploy</h2>
-      <app-task-card *ngFor="let task of tasks | WithStatus: '3'" [task]="task"></app-task-card>
+      <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Deploy" [task]="task"></app-task-card>
     </div>
-  </div>-->
+  </div>
 </div>
