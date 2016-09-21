@@ -9,7 +9,7 @@ import { TaskStatus } from '../task/task-status';
 })
 export class BoardComponent implements OnInit {
   tasks: Array<Task>;
-
+  public TaskStatus = TaskStatus;
   constructor() {
     this.tasks = [
                           new Task(1,'tasl1', 'task1 description', TaskStatus.New),
