@@ -5,11 +5,12 @@ import { TaskStatus } from './task-status';
 import { TaskService } from './task.service';
 
 import { MdCardModule } from '@angular2-material/card';
+import { TaskFormComponent } from './task-form/task-form.component';
 
 @NgModule({
-  declarations: [TaskCardComponent, TaskStatusFilter],
+  declarations: [TaskCardComponent, TaskStatusFilter, TaskFormComponent],
   imports: [MdCardModule],
   providers: [TaskService],
-  exports: [TaskCardComponent, TaskStatusFilter]
+  exports: [TaskCardComponent, TaskStatusFilter, TaskFormComponent]
 })
 export class TaskModule{}

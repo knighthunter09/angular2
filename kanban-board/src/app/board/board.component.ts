@@ -9,6 +9,7 @@ import { TaskService } from '../task/task.service';
 })
 export class BoardComponent implements OnInit {
   tasks: Array<Task>;
+  taskFormOpen: boolean = false;
   public TaskStatus = TaskStatus;
   constructor(private taskService:TaskService) {
     this.tasks = taskService.getTasks();
@@ -17,4 +18,11 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
+  showTaskForm(){
+    this.taskFormOpen = true;
+  }
+
+  taskAddedHandler(){
+    this.taskFormOpen = false;
+  }
 }

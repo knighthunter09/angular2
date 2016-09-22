@@ -1,9 +1,16 @@
-<div class="grid grid-pad">
+<div class="grid grid-pad" *ngIf="!taskFormOpen"> 
   <div class="col-1-6">
     <div class="content">
-      <button md-fab>
+      <button md-fab (click)="showTaskForm()">
         <md-icon class="md-24">add</md-icon>
       </button>
+    </div>
+  </div>
+</div>
+<div class="grid grid-pad" *ngIf="taskFormOpen">
+  <div class="col-1-1">
+    <div class="content">
+      <app-task-form (taskAdded)="taskAddedHandler()"></app-task-form>
     </div>
   </div>
 </div>
