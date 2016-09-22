@@ -1,6 +1,6 @@
 <md-card>
-  <p>
-    task-form works!
-  </p>
+  <div><md-input [(ngModel)]="title" placeholder="title"></md-input> </div>
+  <div><md-input [(ngModel)]="description" placeholder="description"></md-input> </div>
   <button md-raised-button (click)="addTask()">ADD</button>
+  <button md-raised-button (click)="cancelAddTask()">Cancel</button>
 </md-card>

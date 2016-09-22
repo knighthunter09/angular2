@@ -19,4 +19,8 @@ export class TaskService {
     getTasks() {
         return this.tasks;
     }
+    addNewTask(task: Task){
+        this.tasks.push(task);
+        //this.tasks = this.tasks.concat(task);
+    }
 }

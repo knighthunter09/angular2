@@ -18,11 +18,13 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  showTaskForm(){
+  showTaskForm() {
     this.taskFormOpen = true;
   }
 
-  taskAddedHandler(){
+  taskAddedHandler(task: Task) {
+    this.taskService.addNewTask(task);
+    this.tasks = Array.from(this.taskService.getTasks());//replace the whole array, so the ngFor with a pipe can be uodated
     this.taskFormOpen = false;
   }
 }
