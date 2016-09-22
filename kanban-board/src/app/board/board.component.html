@@ -1,4 +1,13 @@
 <div class="grid grid-pad">
+  <div class="col-1-6">
+    <div class="content">
+      <button md-fab>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="grid grid-pad">
   <div class="col-1-4">
     <div class="content">
       <h2>New</h2>
@@ -8,7 +17,7 @@
   <div class="col-1-4">
     <div class="content">
       <h2>Development</h2>
-      <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Dev" [task]="task"></app-task-card> 
+      <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Dev" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">

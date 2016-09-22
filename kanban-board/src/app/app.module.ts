@@ -11,6 +11,7 @@ import { MdButtonModule } from '@angular2-material/button';
 import { MdInputModule } from '@angular2-material/input';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdCardModule } from '@angular2-material/card';
+import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 
 import { routing, appRoutingProviders} from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -34,10 +35,11 @@ import { TaskModule } from './task/task.module';
     MdInputModule,
     MdToolbarModule,
     MdCardModule,
+    MdIconModule,
     routing,
     TaskModule
   ],
-  providers: [UserService],
+  providers: [UserService, MdIconRegistry],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
