@@ -14,7 +14,8 @@ export class TaskFormComponent implements OnInit {
     title: new FormControl("", Validators.required),
     description: new FormControl("", Validators.required)
   });
-  
+  submitted: boolean = false; //for the validation message
+
   constructor() { 
   }
 
@@ -22,8 +23,11 @@ export class TaskFormComponent implements OnInit {
   }
 
   onSubmit(){
-    let task = new Task(1,this.addTaskForm.value.title, this.addTaskForm.value.description, TaskStatus.New);
-    this.taskAdded.emit(task);
+    this.submitted = true;
+    if(this.addTaskForm.valid){
+      let task = new Task(1,this.addTaskForm.value.title, this.addTaskForm.value.description, TaskStatus.New);
+      this.taskAdded.emit(task);
+    }
   }
 
 }

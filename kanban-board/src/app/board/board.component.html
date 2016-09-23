@@ -17,25 +17,33 @@
 <div class="grid grid-pad">
   <div class="col-1-4">
     <div class="content">
-      <h2>New</h2>
+      <md-toolbar [color]="accent">
+        <h2>New</h2>
+      </md-toolbar>
       <app-task-card *ngFor="let task of (tasks | WithStatus: TaskStatus.New)" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
-      <h2>Development</h2>
+      <md-toolbar [color]="accent">
+        <h2>Development</h2>
+      </md-toolbar>
       <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Dev" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
-      <h2>Test</h2>
+      <md-toolbar [color]="accent">
+        <h2>Test</h2>
+      </md-toolbar>
       <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Test" [task]="task"></app-task-card>
     </div>
   </div>
   <div class="col-1-4">
     <div class="content">
-      <h2>Deploy</h2>
+      <md-toolbar [color]="accent">
+        <h2>Deploy</h2>
+      </md-toolbar>
       <app-task-card *ngFor="let task of tasks | WithStatus: TaskStatus.Deploy" [task]="task"></app-task-card>
     </div>
   </div>

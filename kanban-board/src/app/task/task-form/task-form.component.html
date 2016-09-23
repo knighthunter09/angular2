@@ -1,7 +1,21 @@
 <md-card>
   <form [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
-    <div><md-input formControlName="title" placeholder="title"></md-input> </div>
-    <div><md-input formControlName="description" placeholder="description"></md-input> </div>
+    <div>
+      <md-input formControlName="title" placeholder="title"></md-input> 
+      <span *ngIf="(addTaskForm.controls.title.dirty || submitted) && !addTaskForm.controls.title.valid">
+        <span *ngIf="addTaskForm.controls.title.errors.required">
+            Title is required
+        </span>
+      </span>
+    </div>
+    <div>
+      <md-input formControlName="description" placeholder="description"></md-input> 
+      <span *ngIf="(addTaskForm.controls.description.dirty || submitted) && !addTaskForm.controls.description.valid">
+        <span *ngIf="addTaskForm.controls.description.errors.required">
+            Description is required
+        </span>
+      </span>
+    </div>
     <button  md-raised-button type="submit">ADD</button>
   </form>
   <!--<button md-raised-button (click)="cancelAddTask()">Cancel</button>-->

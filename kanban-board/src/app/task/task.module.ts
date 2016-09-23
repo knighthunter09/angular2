@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { TaskCardComponent } from './task-card/task-card.component';
 import { TaskStatusFilter } from './task-status-filter';
 import { TaskStatus } from './task-status';
@@ -12,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TaskCardComponent, TaskStatusFilter, TaskFormComponent],
-  imports: [MdCardModule, MdInputModule, ReactiveFormsModule],
+  imports: [MdCardModule, MdInputModule, ReactiveFormsModule, BrowserModule],
   providers: [TaskService],
   exports: [TaskCardComponent, TaskStatusFilter, TaskFormComponent]
 })
