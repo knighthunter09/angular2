@@ -22,9 +22,8 @@ export class TaskFormComponent implements OnInit {
   }
 
   onSubmit(){
-    //let task = new Task(1,this.title, this.description, TaskStatus.New);
-    //this.taskAdded.emit(task);
-    console.log(this.addTaskForm);
+    let task = new Task(1,this.addTaskForm.value.title, this.addTaskForm.value.description, TaskStatus.New);
+    this.taskAdded.emit(task);
   }
 
 }
