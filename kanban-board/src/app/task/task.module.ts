@@ -8,11 +8,11 @@ import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
 import { TaskFormComponent } from './task-form/task-form.component';
 
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TaskCardComponent, TaskStatusFilter, TaskFormComponent],
-  imports: [MdCardModule, MdInputModule, FormsModule],
+  imports: [MdCardModule, MdInputModule, ReactiveFormsModule],
   providers: [TaskService],
   exports: [TaskCardComponent, TaskStatusFilter, TaskFormComponent]
 })

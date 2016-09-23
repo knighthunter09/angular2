@@ -1,6 +1,8 @@
 <md-card>
-  <div><md-input [(ngModel)]="title" placeholder="title"></md-input> </div>
-  <div><md-input [(ngModel)]="description" placeholder="description"></md-input> </div>
-  <button md-raised-button (click)="addTask()">ADD</button>
-  <button md-raised-button (click)="cancelAddTask()">Cancel</button>
+  <form [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
+    <div><md-input formControlName="title" placeholder="title"></md-input> </div>
+    <div><md-input formControlName="description" placeholder="description"></md-input> </div>
+    <button  md-raised-button type="submit">ADD</button>
+  </form>
+  <!--<button md-raised-button (click)="cancelAddTask()">Cancel</button>-->
 </md-card>

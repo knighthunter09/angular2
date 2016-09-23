@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Task } from '../task';
 import { TaskStatus } from '../task-status';
 
@@ -9,19 +10,21 @@ import { TaskStatus } from '../task-status';
 })
 export class TaskFormComponent implements OnInit {
   @Output() taskAdded = new EventEmitter();
-  title: string;
-  description: string;
-  constructor() { }
+  addTaskForm = new FormGroup({
+    title: new FormControl("", Validators.required),
+    description: new FormControl("", Validators.required)
+  });
+  
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
-  addTask(){
-    let task = new Task(1,this.title, this.description, TaskStatus.New);
-    this.taskAdded.emit(task);
+  onSubmit(){
+    //let task = new Task(1,this.title, this.description, TaskStatus.New);
+    //this.taskAdded.emit(task);
+    console.log(this.addTaskForm);
   }
 
-  cancelAddTask(){
-
-  }
 }
