@@ -29,11 +29,8 @@ export class BoardComponent implements OnInit {
 
   taskAddedHandler(task: Task) {
     this.taskService.addNewTask(task)
-              .map(res => res.json)
-                .subscribe(t => this.taskService.getTasks() 
-                                    .subscribe(tasks => this.tasks = tasks)
-                          );
-    
+                    .flatMap(res => this.taskService.getTasks())
+                    .subscribe(tasks => this.tasks = tasks);
     this.taskFormOpen = false;
   }
 }
