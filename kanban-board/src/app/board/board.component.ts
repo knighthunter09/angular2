@@ -30,14 +30,10 @@ export class BoardComponent implements OnInit {
   taskAddedHandler(task: Task) {
     this.taskService.addNewTask(task)
               .map(res => res.json)
-                .subscribe(t => console.log(t), 
-                err => console.error("Error add "+err), 
-                () => console.log('done'));;
-    //this.tasks = Array.from(this.taskService.getTasks());//replace the whole array, so the ngFor with a pipe can be uodated
-    this.taskService.getTasks() //TO DO exec that when addNewTask finishes
-    .subscribe(tasks => this.tasks = tasks, 
-                err => console.error("Error constructor "+err), 
-                () => console.log('done'));
+                .subscribe(t => this.taskService.getTasks() 
+                                    .subscribe(tasks => this.tasks = tasks)
+                          );
+    
     this.taskFormOpen = false;
   }
 }
