@@ -10,13 +10,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  tasks: Observable<Task>;
+  tasks: Array<Task>;
   taskFormOpen: boolean = false;
   public TaskStatus = TaskStatus;
   constructor(private taskService:TaskService) {
     taskService.getTasks()
-    .map(res => res.json())
-    .subscribe(t => {console.log("sub:");console.log(t._embedded.tasks); this.tasks = t._embedded.tasks }, 
+    .map(tasks =>  tasks.map(function(t) { 
+                        return new Task(null, t.title, t.description, Task.statusFromString(t.status)); 
+                   }))
+    .subscribe(tasks => this.tasks = tasks, 
                 err => console.error("Error constructor "+err), 
                 () => console.log('done'));
   }
@@ -36,9 +38,8 @@ export class BoardComponent implements OnInit {
                 () => console.log('done'));;
     //this.tasks = Array.from(this.taskService.getTasks());//replace the whole array, so the ngFor with a pipe can be uodated
     this.taskService.getTasks()
-    .map(res => res.json())
-    .subscribe(t => {console.log("sub:");console.log(t); this.tasks = t}, 
-                err => console.error("Error get "+err), 
+    .subscribe(tasks => this.tasks = tasks, 
+                err => console.error("Error constructor "+err), 
                 () => console.log('done'));
     this.taskFormOpen = false;
   }
