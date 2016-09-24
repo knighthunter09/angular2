@@ -15,9 +15,6 @@ export class BoardComponent implements OnInit {
   public TaskStatus = TaskStatus;
   constructor(private taskService:TaskService) {
     taskService.getTasks()
-    .map(tasks =>  tasks.map(function(t) { 
-                        return new Task(null, t.title, t.description, Task.statusFromString(t.status)); 
-                   }))
     .subscribe(tasks => this.tasks = tasks, 
                 err => console.error("Error constructor "+err), 
                 () => console.log('done'));
@@ -37,7 +34,7 @@ export class BoardComponent implements OnInit {
                 err => console.error("Error add "+err), 
                 () => console.log('done'));;
     //this.tasks = Array.from(this.taskService.getTasks());//replace the whole array, so the ngFor with a pipe can be uodated
-    this.taskService.getTasks()
+    this.taskService.getTasks() //TO DO exec that when addNewTask finishes
     .subscribe(tasks => this.tasks = tasks, 
                 err => console.error("Error constructor "+err), 
                 () => console.log('done'));
