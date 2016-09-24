@@ -1,6 +1,9 @@
 <md-card>
    <md-card-header>
-      <img md-card-avatar src="img/new.png">
+      <img *ngIf="task.status == 0" md-card-avatar src="img/new.png">
+      <img *ngIf="task.status == 1" md-card-avatar src="img/development.png">
+      <img *ngIf="task.status == 2" md-card-avatar src="img/debug.png">
+      <img *ngIf="task.status == 3" md-card-avatar src="img/deploy.png">
       <md-card-title>{{task.title}}</md-card-title>
       <md-card-subtitle>{{task.description}}</md-card-subtitle>
    </md-card-header>
