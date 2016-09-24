@@ -10,6 +10,7 @@ import { TaskStatus } from '../task-status';
 })
 export class TaskFormComponent implements OnInit {
   @Output() taskAdded = new EventEmitter();
+  @Output() canceled = new EventEmitter();
   addTaskForm = new FormGroup({
     title: new FormControl("", Validators.required),
     description: new FormControl("", Validators.required)
@@ -29,5 +30,7 @@ export class TaskFormComponent implements OnInit {
       this.taskAdded.emit(task);
     }
   }
-
+  cancel(){
+    this.canceled.emit();
+  }
 }

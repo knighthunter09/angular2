@@ -10,7 +10,7 @@
 <div class="grid grid-pad" *ngIf="taskFormOpen">
   <div class="col-1-1">
     <div class="content">
-      <app-task-form (taskAdded)="taskAddedHandler($event)"></app-task-form>
+      <app-task-form (taskAdded)="taskAddedHandler($event)" (canceled)="addTaskCanceled($event)"></app-task-form>
     </div>
   </div>
 </div>

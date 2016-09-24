@@ -33,4 +33,8 @@ export class BoardComponent implements OnInit {
                     .subscribe(tasks => this.tasks = tasks);
     this.taskFormOpen = false;
   }
+
+  addTaskCanceled(){
+    this.taskFormOpen = false;
+  }
 }
