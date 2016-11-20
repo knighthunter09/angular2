@@ -7,11 +7,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { UsersModule } from './users/users.module';
-import { TasksModule } from './tasks/tasks.module';
-import { UsersComponent } from './users/users.component';
-import { TasksComponent } from './tasks/tasks.component';
-
+import { UsersModule, UsersComponent } from './users';
+import { TasksModule, TasksComponent } from './tasks';
 
 @NgModule({
   declarations: [
